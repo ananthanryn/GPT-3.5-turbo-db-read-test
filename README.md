@@ -61,7 +61,7 @@ After which type in the following command to install an editable module of the p
 pip install -e .
 ```
 
-After making any changes to the code you can always run it whenever by executing `chadgpt`
+After making any changes to the code you can always run it whenever by executing `chadgpt` and wait for your default browser to automatically open with the interface (might take a bit longer when running for the first time)
 
 Whenever you are modifying the code, most of the time you won't have to rebuild and reinstall the editable module and that is the advantage of this approach.
 
