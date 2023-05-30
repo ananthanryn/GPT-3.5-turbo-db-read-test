@@ -1,0 +1,6 @@
+<div class="hugeblock">
+    <div [ngClass]="message.role === 'user'? 'userhero' : 'gpthero'"></div>
+    <div [ngClass]="message.role === 'user'? 'message-block user' : 'message-block gpt'">
+        <pre>{{message.content}}</pre>
+    </div>
+</div>

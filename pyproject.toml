@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "chadGPT"
+authors = [{name = "Anantha Narayanan N", email = "ananthanryn@gmail.com"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+keywords = ["ChatGPT", "OpenAI", "Database"]
+classifiers = [
+    "License :: OSI Approved :: MIT License"
+]
+version = "0.0.0"
+description = "ChatGPT model interfacing with database prototype"
+requires-python = ">=3.11"
+dependencies = [
+    "openai >=0.27.7",
+    "pandas >=2.0.2",
+    "fastapi >=0.95.2",
+    "uvicorn[standard] >=0.22.0"
+]
+
+[project.urls]
+Source = "https://github.com/ananthanryn/GPT-3.5-turbo-db-read-test"
+
+[project.optional-dependencies]
+dev = [
+    "black >=22.12.0",
+    "flake8 >=6.0.0",
+    "mypy >=0.991",
+    "build >=0.9.0",
+    "twine >=4.0.2"
+]
+
+[project.scripts]
+chadgpt = "chadGPT.__main__:main"

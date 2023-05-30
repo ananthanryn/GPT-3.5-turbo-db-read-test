@@ -1,0 +1,17 @@
+<div class="chat-container">
+  <div class="chat-messages">
+    <div class="lhs">
+      <div class="chat-selector">
+        This is a message selection
+      </div>
+    </div>
+    <div class="rhs">
+      <div #scrollChatBox id="scrollChatBox" class="chat-message-box">
+        <app-chat-block *ngFor="let message of messages" [message]="message">
+        </app-chat-block>
+      </div>
+      <textarea rows="1" class="chat-input" [(ngModel)]="userInput" (keydown.enter)="sendMessage($event)" placeholder="Type your message..."></textarea>
+    </div>
+  </div>
+
+</div>

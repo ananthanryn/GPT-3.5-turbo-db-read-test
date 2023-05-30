@@ -1,0 +1,66 @@
+.hugeblock {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    .message-block {
+        background-color: forestgreen;
+        color: white;
+        font-family: system-ui;
+        margin: 0.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        grid-column: 2/2;
+        pre {
+            font-family: inherit;
+            white-space: pre-wrap;
+        }
+        &.user {
+            background: rgb(2,0,36);
+            background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(58,9,121,1) 40%, rgba(0,212,255,1) 100%);            
+        }
+        &.gpt {
+            background: rgb(2,0,36);
+            background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(9,121,58,1) 40%, rgba(0,212,255,1) 100%);            
+        }
+    }
+    
+    .userhero {
+        background: rgb(2,0,36);
+        background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(58,9,121,1) 40%, rgba(0,212,255,1) 100%);
+        width: 50px;
+        height: 50px;
+        align-self: self-start;
+        border-radius: 50%;
+        grid-column: 1/1;
+        margin: 0.5rem;
+    }
+    .userhero::after{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: xx-large;
+        content: "U";
+        display: flex;
+        justify-content: center;
+        transform: translate(0%, 20%);
+      }
+    .gpthero {
+        background: rgb(2,0,36);
+        background: linear-gradient(153deg, rgba(2,0,36,1) 0%, rgba(9,121,58,1) 40%, rgba(0,212,255,1) 100%);
+        border-radius: 50%;
+        grid-column: 1/1;
+        width: 50px;
+        height: 50px;
+        align-self: self-start;
+        margin: 0.5rem;
+    }
+    .gpthero::after{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        font-size: xx-large;
+        content: "G";
+        display: flex;
+        justify-content: center;
+        transform: translate(0%, 20%);
+      }
+}
